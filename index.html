@@ -11,15 +11,22 @@
   <header>
     <nav>
       <h1><i class="fas fa-code"></i> Sara Rafi</h1>
-      <ul>
-        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-        <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
-        <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-      <button id="theme-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+          <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+          <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
+          <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <button id="theme-toggle" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+      </div>
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
 
@@ -34,10 +41,11 @@
       </div>
     </div>
     <div class="hero-image">
-      <div class="code-animation">
-        <div class="code-line"></div>
-        <div class="code-line"></div>
-        <div class="code-line"></div>
+      <div class="tech-stack-animation">
+        <div class="tech-icon"><i class="fab fa-react"></i></div>
+        <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+        <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+        <div class="tech-icon"><i class="fas fa-database"></i></div>
       </div>
     </div>
   </section>
@@ -264,16 +272,37 @@
           </div>
         </div>
         <div class="social-links">
-          <a href="www.linkedin.com/in/sara-rafi-736a28302" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/sara-rafi-736a28302
+          " class="social-link"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/isararafi/" class="social-link"><i class="fab fa-github"></i></a>
         
         </div>
       </div>
       <form id="contact-form" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <span class="error-message" id="name-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+          <span class="error-message" id="subject-error"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
+        
         <button type="submit" class="btn btn-primary">
           <i class="fas fa-paper-plane"></i> Send Message
         </button>
